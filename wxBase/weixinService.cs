@@ -28,6 +28,7 @@ namespace wxBase
                 if (token_validate_time<=DateTime.Now)
                 {
                     String Url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appidStr + "&secret=" + appsecretStr;
+
                     access_token = HttpService.Get(Url);
                 }
                 wxAccessToken token = JSONHepler.JsonToObject<wxAccessToken>(access_token);
@@ -81,6 +82,16 @@ namespace wxBase
                 signature.AppendFormat("{0:x2}", b);
             }
             return signature.ToString();
+        }
+        /// <summary>
+        /// 微信服务器IP地址
+        /// </summary>
+        /// <returns>返回微信服务器IP地址</returns>
+        public static String GetCallbackip()
+        {
+            String url = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=" + Access_token;
+            String json = HttpService.Get(url);
+            return json;
         }
     }
 }
