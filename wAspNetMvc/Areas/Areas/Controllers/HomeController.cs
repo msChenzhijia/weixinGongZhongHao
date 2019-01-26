@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using wxBase;
+using wxBase.Model.Menu;
 
 namespace wAspNetMvc.Areas.Areas.Controllers
 {
@@ -24,5 +25,12 @@ namespace wAspNetMvc.Areas.Areas.Controllers
             String ipList = weixinService.GetCallbackip();
             return View(ipList);
         }
+        public ActionResult GetConfig()
+        {
+            wxModelMenuConfig menu_config = JSONHepler.JsonToObject<wxModelMenuConfig>(wxMenuService.GetConfig());
+            ViewData["menu_config"] = menu_config;
+            return View();
+        }
+       
     }
 }

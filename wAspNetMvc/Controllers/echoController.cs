@@ -45,5 +45,10 @@ namespace wAspNetMvc.Controllers
             ViewBag.noce = noce;
             return View();
         }
+        public ActionResult Create()
+        {
+            Response.Write(wxMenuService.Create(Server.MapPath("~/menu.txt")));
+            return View();
+        }
     }
 };

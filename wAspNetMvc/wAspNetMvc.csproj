@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Areas\AreasAreaRegistration.cs" />
     <Compile Include="Areas\Areas\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Areas\Controllers\MenuController.cs" />
     <Compile Include="Controllers\echoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,6 +145,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="menu.txt" />
+    <Content Include="menu01.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Areas\Views\web.config" />
@@ -152,6 +155,14 @@
     <Content Include="Areas\Areas\Views\Home\Index.cshtml" />
     <Content Include="Areas\Areas\Views\Home\get_access_token.cshtml" />
     <Content Include="Areas\Areas\Views\Home\getcallbackip.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\Create.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\Get.cshtml" />
+    <Content Include="Areas\Areas\Views\Home\GetConfig.cshtml" />
+    <Content Include="Areas\Areas\Views\Home\addcomditional.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\addcomditional.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\delconditional.cshtml" />
+    <Content Include="Areas\Areas\Views\Menu\trymatch.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -179,6 +190,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\echo\Index.cshtml" />
+    <Content Include="Views\echo\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

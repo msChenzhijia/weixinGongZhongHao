@@ -4,6 +4,12 @@
 }
 
 <h2>Index</h2>
-@Html.ActionLink("获取access_token", "get_access_token", new { area = "Areas" },null)
-@Html.ActionLink("获取微信服务器IP地址", "getcallbackip", new { area = "Areas" },null)
+@Html.ActionLink("获取access_token", "get_access_token", new { area = "Areas" }, null)
+@Html.ActionLink("获取微信服务器IP地址", "getcallbackip", new { area = "Areas" }, null)
+@Html.ActionLink("创建自定义菜单", "Create", "echo")
+@Html.ActionLink("删除自定义菜单", "delete", "Menu", new { area = "Areas" }, null)
+@Html.ActionLink("获取自定义菜单配置", "GetConfig", "Menu", new { area = "Areas" }, null)
+@Html.ActionLink("获取自定义菜单配置", "addcomditional", "Menu", new { area = "Areas" }, null)
+@Html.ActionLink("删除个性化菜单", "delconditional", "Menu", new { area = "Areas" }, null)
+@Html.ActionLink("测试个性化菜单匹配结果", "trymatch", "Menu", new { area = "Areas" }, null)
 
